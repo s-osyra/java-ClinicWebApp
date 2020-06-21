@@ -2,8 +2,10 @@ package pl.deso.ClinicWebApp.security;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -19,12 +21,22 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     UserDetailsService userDetailsService;
 
     @Autowired
-    MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
+    MyLogoutSuccessHandler myLogoutSuccessHandler;
+
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
+
     }
+
+
+    @Bean
+    @Override
+    protected AuthenticationManager authenticationManager() throws Exception {
+        return super.authenticationManager();
+    }
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -32,17 +44,20 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeRequests()
-//                .antMatchers(HttpMethod.GET, "/test")
-//                .permitAll()
+                .antMatchers(HttpMethod.POST, "/login")
+                .permitAll()
+                .antMatchers(HttpMethod.GET, "/visit/*")
+                .permitAll()
                 .antMatchers(HttpMethod.POST, "/user/new")
                 .permitAll()
                 .anyRequest()
 //                .permitAll();
                 .authenticated()
                 .and()
-                .formLogin().successHandler(myAuthenticationSuccessHandler)
+                .logout()
+                .logoutSuccessHandler(myLogoutSuccessHandler)
+                .and()
                 ;
-
 
     }
 

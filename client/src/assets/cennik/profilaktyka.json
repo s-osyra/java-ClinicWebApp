@@ -1,0 +1,9 @@
+[
+    {"service":"FLUORYZACJA 1 ŁUK", "price": 	"50 zł"},
+    {"service":"FLUORYZACJA ŁUKI", "price": 	"100 zł"},
+    {"service":"LAPISOWANIE ZĘBÓW MLECZNYCH 1 ZĄB", "price": 	"50 zł"},
+    {"service":"LAKOWANIE 1 ZĄB", "price": 	"50 zł"},
+    {"service":"LECZENIE NADWRAŻLIWOŚCI SZYJEK (1 ząb)", "price": 	"50 zł"},
+    {"service":"USUNIĘCIE KAMIENIA CZĘSCIEJ NIZ RAZ W ROKU", "price": 	"50 zł za łuk"},
+    {"service":"USUNIECIE KAMIENIA +PASTA Z FLUOREM+ REMINERALIZACJA 2 ŁUKI", "price": 	"200 zł"}
+]

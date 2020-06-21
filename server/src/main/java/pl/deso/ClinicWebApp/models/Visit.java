@@ -1,30 +1,24 @@
 package pl.deso.ClinicWebApp.models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table (
+   uniqueConstraints = @UniqueConstraint (columnNames = {"visitDate", "visitLocation"})
+)
 public class Visit {
 
     @Id
     @GeneratedValue
     int idVisit;
-
-    User visitDoctor;
-    User visitPatient;
+    String visitPatientEmail;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm")
     Date visitDate;
     String visitLocation;
-
-    public Visit(int idVisit, User visitDoctor, User visitPatient, Date visitDate, String visitLocation) {
-        this.idVisit = idVisit;
-        this.visitDoctor = visitDoctor;
-        this.visitPatient = visitPatient;
-        this.visitDate = visitDate;
-        this.visitLocation = visitLocation;
-    }
 
     public int getIdVisit() {
         return idVisit;
@@ -34,20 +28,12 @@ public class Visit {
         this.idVisit = idVisit;
     }
 
-    public User getVisitDoctor() {
-        return visitDoctor;
+    public String getVisitPatientEmail() {
+        return visitPatientEmail;
     }
 
-    public void setVisitDoctor(User visitDoctor) {
-        this.visitDoctor = visitDoctor;
-    }
-
-    public User getVisitPatient() {
-        return visitPatient;
-    }
-
-    public void setVisitPatient(User visitPatient) {
-        this.visitPatient = visitPatient;
+    public void setVisitPatientEmail(String visitPatientEmail) {
+        this.visitPatientEmail = visitPatientEmail;
     }
 
     public Date getVisitDate() {
@@ -65,9 +51,4 @@ public class Visit {
     public void setVisitLocation(String visitLocation) {
         this.visitLocation = visitLocation;
     }
-
-
-
-
-
 }

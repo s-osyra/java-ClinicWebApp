@@ -3,7 +3,9 @@ package pl.deso.ClinicWebApp.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 import java.util.Map;
 
 @Entity
@@ -18,14 +20,17 @@ public class User {
     private boolean userActive;
     private String userRole;
 
-    public User(String userEmail, String userName, String userSurname, String userPassword, boolean userActive, String userRole) {
-        this.userEmail = userEmail;
-        this.userName = userName;
-        this.userSurname = userSurname;
-        this.userPassword = userPassword;
-        this.userActive = userActive;
-        this.userRole = userRole;
-    }
+    @OneToMany(mappedBy = "visitPatientEmail")
+    private List<Visit> userVisits;
+
+//    public User(String userEmail, String userName, String userSurname, String userPassword, boolean userActive, String userRole) {
+//        this.userEmail = userEmail;
+//        this.userName = userName;
+//        this.userSurname = userSurname;
+//        this.userPassword = userPassword;
+//        this.userActive = userActive;
+//        this.userRole = userRole;
+//    }
 
     public String getUserEmail() {
         return userEmail;
@@ -75,11 +80,21 @@ public class User {
         this.userRole = userRole;
     }
 
+    public List<Visit> getUserVisits() {
+        return userVisits;
+    }
+
+    public void setUserVisits(List<Visit> userVisits) {
+        this.userVisits = userVisits;
+    }
+
     @Override
     public String toString() {
         return "userEmail: " + this.userEmail + "\nuserName: " + this.userName +"\nuserSurname: " + this.userSurname
-                + "\nuserActive: " + this.userActive + "\nuserRole: " + userRole + "\nuserPassword: " + this.userPassword;
+                + "\nuserActive: " + this.userActive + "\nuserRole: " + userRole;
     }
+
+
 
     public void updateUser (Map<String , String> map) {
 

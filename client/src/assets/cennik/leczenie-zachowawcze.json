@@ -1,0 +1,14 @@
+[
+    {"service":"WYPEŁNIENIE ŚWIATŁOUTWARDZALNE", "price": 	"100 - 250 zł"},
+    {"service":"WYPEŁNIENIE CHEMOUTWARDZALNE ZĘBY (4-8)", "price": 	"100 - 200 zł"},
+    {"service":"WYPEŁNIENIE ŚWIATŁO Z WŁÓKNA SZKLANEGO", "price": 	"150 - 300 zł"},
+    {"service":"ODBUDOWA ZĘBA NA ĆWIEKU STANDARDOWYM", "price": 	"250 - 500 zł"},
+    {"service":"ODBUDOWA ZĘBA NA ĆWIEKU Z WŁÓKNA SZKLANEGO", "price": 	"350 - 500 zł"},
+    {"service":"LICÓWKA AKRYLOWA", "price":	"300 - 500 zł"},
+    {"service":"PIN OKOŁOMIAZGOWY", "price": 	"50 - 150 zł"},
+    {"service":"PORADA BEZ LECZENIA (badanie + konsultacja + recepta)", "price": 	"50 zł"},
+    {"service":"ZNIECZULENIE", "price": 	"30 - 50 zł"},
+    {"service":"WYPEŁNIENIE TYMCZASOWE", "price": 	"50 zł"},
+    {"service":"LECZENIE ZMIAN NA BŁONIE SLUZOWEJ", "price": 	"50 - 500 zł"}
+
+]

@@ -1,0 +1,36 @@
+.toolbar {
+    height: 60px;
+    display: flexbox;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.56);
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+.logo {
+    width: 60px;
+    display: flexbox;
+    align-self: center;
+    margin: 0px;
+    border: 1px solid black;
+}
+
+
+
+.nav-button {
+    height: 40px;
+    width: auto;
+    margin: 0 auto;
+    padding: 30px;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    display: inline-flexbox;
+
+}
+
+
+.title-table {
+    text-align: center;
+}
