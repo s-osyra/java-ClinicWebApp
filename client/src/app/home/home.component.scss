@@ -1,3 +1,13 @@
 body {
+    background: 
+                linear-gradient(
+                    rgba(39, 122, 160, 0.568),
+                    rgba(39, 122, 160, 0.568) 
+                ),
+                url('../../assets/img/backgroundimg.jpg');
+    width: 100%;
+    background-position: center;
+    background-size: cover;
     background-color: #f3f7fb
+    
 }
