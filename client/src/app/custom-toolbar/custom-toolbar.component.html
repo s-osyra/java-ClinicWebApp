@@ -1,25 +1,28 @@
-
     <mat-toolbar class="toolbar">
-        <img
-        class ="logo"
-        src="../../assets/img/shark.gif"
-        alt="shark"
-        >
-        
-        <table>
-            <tr class="title-table"> 
-                <h2>Sharkdent</h2>
-            </tr>
-            <tr class="title-table">
-                <h3 style="font-style: italic;">Stomatologia</h3>  
-            </tr>
-        </table>
-    
-    
-        
-        <a mat-button class="nav-button">CENNIK</a>
-        <a mat-button class="nav-button">REJESTRACJA</a>
-        <a mat-button class="nav-button">O NAS</a>
+        <div class="toolbar-element">
+            <img
+            class ="logo"
+            src="../../assets/img/shark.gif"
+            alt="shark"
+            >
+        </div>
+   
+        <div class="toolbar-element">
+            <table>
+                <tr class="title-table"> 
+                    <h2>Sharkdent</h2>
+                </tr>
+                <tr class="title-table">
+                    <h3 style="font-style: italic;">Stomatologia</h3>  
+                </tr>
+            </table>
+        </div>
+
+        <div class="toolbar-element">
+            <a mat-button class="nav-button" (click) = "btnAbout();">O NAS</a>
+            <a mat-button class="nav-button" (click) = "btnPrices();">CENNIK</a>
+            <a mat-button class="nav-button">REJESTRACJA</a>
+        </div>      
     
     </mat-toolbar>
 

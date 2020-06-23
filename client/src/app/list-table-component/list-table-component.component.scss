@@ -1,0 +1,10 @@
+$tableValue : 650px;
+$panelWidth : 750px;
+
+mat-expansion-panel {
+    width: $panelWidth;
+}
+
+.table-services  {
+    width: $tableValue;
+}

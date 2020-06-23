@@ -1,0 +1,24 @@
+
+<head>
+
+</head>
+
+<body>
+    <div style="padding-bottom: 20px;">
+        <app-custom-toolbar></app-custom-toolbar>
+    </div>
+
+    <div class="centered">
+        <mat-accordion>
+            <app-list-table-component [dataSource] = 'chirurgia'  [title] = 'chirurgiaTitle'></app-list-table-component>
+            <app-list-table-component [dataSource] = 'zachowawcze'  [title] = 'zachowawczeTitle'></app-list-table-component>
+            <app-list-table-component [dataSource] = 'profilaktyka'  [title] = 'profilaktykaTitle'></app-list-table-component>
+            <app-list-table-component [dataSource] = 'mleczne'  [title] = 'mleczneTitle'></app-list-table-component>
+        </mat-accordion>
+
+
+    </div>
+
+
+
+</body>

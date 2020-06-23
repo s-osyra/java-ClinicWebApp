@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as chirurgiaJSON from '../assets/cennik/chirurgia.json';
-
-
-let chirurgia = JSON.parse(JSON.stringify(chirurgiaJSON)).default; 
 
 
 @Component({
@@ -13,8 +9,5 @@ let chirurgia = JSON.parse(JSON.stringify(chirurgiaJSON)).default;
 
 export class AppComponent {
   title = 'client';
-  displayedColumns: string[] = ['service', 'price'];
-  dataSource = chirurgia;
-
 }
 
