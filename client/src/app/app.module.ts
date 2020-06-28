@@ -13,7 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListTableComponentComponent } from './list-table-component/list-table-component.component';
 import { PricesRouteComponent } from './prices-route/prices-route.component';
 import { HomeComponent } from './home/home.component';
-
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon'; 
+import {MatDividerModule} from '@angular/material/divider'; 
+import {MatTabsModule} from '@angular/material/tabs'; 
 
 @NgModule({
   declarations: [
@@ -33,7 +36,11 @@ import { HomeComponent } from './home/home.component';
     MatButtonModule,
     MatTableModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule,
+    MatIconModule,
+    MatDividerModule,
+    MatTabsModule
     
   ],
   providers: [],

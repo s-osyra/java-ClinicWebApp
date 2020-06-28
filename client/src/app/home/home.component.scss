@@ -1,13 +1,79 @@
 body {
-    background: 
-                linear-gradient(
-                    rgba(39, 122, 160, 0.568),
-                    rgba(39, 122, 160, 0.568) 
-                ),
-                url('../../assets/img/backgroundimg.jpg');
+
+    height: 10000px;
     width: 100%;
     background-position: center;
     background-size: cover;
-    background-color: #f3f7fb
+    background-color: 	#dbdfe2;
+    z-index: -2;
     
 }
+
+
+.first-div {
+    display: block;
+    background-color: 	#dbdfe2;
+    width: auto;
+    height: auto;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.image {
+    display: block;
+    top: 0%;
+    left: 0%;
+    height: auto;
+    max-height: 100vh;
+    max-width: 100%;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+   z-index: -1;
+}
+
+.image-text-main {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: block;
+    font-size: 10vw;
+    color: white;
+    top: 20%;
+    left: 50%; 
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+}
+
+.image-text-sub {
+    position: absolute;
+    font-size-adjust: inherit;
+    font-size: 4vw;
+    color: white;
+    top: 35%;
+    left: 60%; 
+}
+
+.menu {
+float: left;
+display: block;
+position: relative;
+left: 95%;
+top: 0%;
+position: fixed;
+z-index: 1;
+}
+
+.app-list-table-component {
+    display: block;
+}
+
+.centered {
+    position: absolute;
+    top: 125%;
+    left: 50%;
+  }

@@ -1,9 +1,58 @@
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap" rel="stylesheet"> 
 
 </head>
 
 <body>
-    <div style="padding-bottom: 20px;">
-        <app-custom-toolbar></app-custom-toolbar>
+    <div class="menu">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+    
+          <mat-menu #menu="matMenu">
+    
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+    
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voice mail</span>
+            </button>
+    
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+    
+          </mat-menu>
     </div>
+
+    <div>
+        <div class="first-div">
+            <img src="../../assets/img/image1.jpg" class="image">
+            <h1 class ="image-text-main">Sharkdent</h1>
+            <h2 class ="image-text-sub">STOMATOLOGIA</h2>
+        </div>
+        <mat-divider></mat-divider>
+    </div>
+
+
+
+    
+    <div class="centered">
+
+        <mat-tab-group>
+            <mat-tab label={{chirurgiaTitle}}> <app-list-table-component [dataSource] = 'chirurgia'></app-list-table-component> </mat-tab>
+            <mat-tab label={{zachowawczeTitle}}> <app-list-table-component [dataSource] = 'zachowawcze'></app-list-table-component> </mat-tab>
+            <mat-tab label={{profilaktykaTitle}}> <app-list-table-component [dataSource] = 'profilaktyka'></app-list-table-component> </mat-tab>
+            <mat-tab label={{mleczneTitle}}><app-list-table-component [dataSource] = 'mleczne'></app-list-table-component> </mat-tab>
+        </mat-tab-group>
+          
+    </div>
+
+
+
+
 </body>
