@@ -40,7 +40,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatMenuModule,
     MatIconModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+
     
   ],
   providers: [],

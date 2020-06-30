@@ -1,10 +1,10 @@
 body {
 
-    height: 10000px;
+    height: 500%;
     width: 100%;
     background-position: center;
     background-size: cover;
-    background-color: 	#dbdfe2;
+    background-color: 	#d9dadc;
     z-index: -2;
     
 }
@@ -12,7 +12,6 @@ body {
 
 .first-div {
     display: block;
-    background-color: 	#dbdfe2;
     width: auto;
     height: auto;
     top: 0%;
@@ -77,3 +76,61 @@ z-index: 1;
     top: 125%;
     left: 50%;
   }
+
+
+  .image-2 {
+    position: absolute;
+    height: auto;
+    top: 115%;
+    left: 10%;
+    max-width: 100%;
+    width: 300px;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid black;
+    filter: grayscale(0%);
+    z-index: 2;
+}
+.image-3 {
+    position: absolute;
+    height: auto;
+    top: 105%;
+    left: 15%;
+    max-width: 100%;
+    width: 300px;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid black;
+    filter: grayscale(100%);
+}
+.image-4 {
+    position: absolute;
+    height: auto;
+    top: 120%;
+    left: 20%;
+    max-width: 100%;
+    width: 300px;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid black;
+    filter: grayscale(100%);
+}
+.image-5 {
+    position: absolute;
+    height: auto;
+    top: 145%;
+    left: 5%;
+    max-width: 100%;
+    width: 400px;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid black;
+    filter: grayscale(100%);
+}
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+ #map {
+    height: 100%;
+  }
+  
